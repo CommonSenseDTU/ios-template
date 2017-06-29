@@ -12,4 +12,9 @@ target 'template' do
     pod 'musli'
   end
 
+  # Use local Granola when available
+  if File.exist? "../Granola/Granola.podspec"
+    pod 'Granola', :path => "../Granola"
+  end
+
 end
